@@ -284,7 +284,6 @@ img {
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
-    background-color: rgba(0, 0, 0, 0.3);
     opacity: 0;
     transition: opacity 1s ease-in-out;
 }
@@ -569,7 +568,7 @@ img {
 }
 
 .testimonials .container {
-    background-color: #8B3A3A;
+    background-color: #6B2B2B;
     padding: 60px;
     border-radius: 8px;
 }
@@ -818,7 +817,7 @@ img {
    Footer
    ======================================== */
 .footer {
-    background-color: #2C3E50;
+    background-color: #6B2B2B;
     color: var(--white);
     padding: 70px 0 0;
 }
