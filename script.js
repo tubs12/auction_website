@@ -23,6 +23,72 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     
     // ========================================
+    // Hero Carousel
+    // ========================================
+    const carouselSlide = document.querySelectorAll('.carousel-slide');
+    const carouselDots = document.querySelector('.carousel-dots');
+    const prevBtn = document.querySelector('.prev-btn');
+    const nextBtn = document.querySelector('.next-btn');
+    
+    if (carouselSlide.length > 0) {
+        let currentSlide = 0;
+        let slideInterval;
+        
+        // Create dots
+        carouselSlide.forEach((_, index) => {
+            const dot = document.createElement('div');
+            dot.classList.add('dot');
+            if (index === 0) dot.classList.add('active');
+            dot.addEventListener('click', () => goToSlide(index));
+            carouselDots.appendChild(dot);
+        });
+        
+        const dots = document.querySelectorAll('.carousel-dots .dot');
+        
+        function goToSlide(index) {
+            carouselSlide[currentSlide].classList.remove('active');
+            dots[currentSlide].classList.remove('active');
+            
+            currentSlide = index;
+            
+            carouselSlide[currentSlide].classList.add('active');
+            dots[currentSlide].classList.add('active');
+        }
+        
+        function nextSlide() {
+            const newIndex = (currentSlide + 1) % carouselSlide.length;
+            goToSlide(newIndex);
+        }
+        
+        function prevSlide() {
+            const newIndex = (currentSlide - 1 + carouselSlide.length) % carouselSlide.length;
+            goToSlide(newIndex);
+        }
+        
+        // Auto-advance every 5 seconds
+        function startCarousel() {
+            slideInterval = setInterval(nextSlide, 5000);
+        }
+        
+        function stopCarousel() {
+            clearInterval(slideInterval);
+        }
+        
+        // Event listeners
+        if (prevBtn) prevBtn.addEventListener('click', () => { stopCarousel(); prevSlide(); startCarousel(); });
+        if (nextBtn) nextBtn.addEventListener('click', () => { stopCarousel(); nextSlide(); startCarousel(); });
+        
+        // Pause on hover
+        const heroSection = document.querySelector('.hero');
+        if (heroSection) {
+            heroSection.addEventListener('mouseenter', stopCarousel);
+            heroSection.addEventListener('mouseleave', startCarousel);
+        }
+        
+        startCarousel();
+    }
+    
+    // ========================================
     // Smooth Scroll for Navigation Links
     // ========================================
     const navLinksItems = document.querySelectorAll('.nav-links a');
