@@ -284,6 +284,7 @@ img {
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
+    background-color: rgba(0, 0, 0, 0.3);
     opacity: 0;
     transition: opacity 1s ease-in-out;
 }
@@ -397,7 +398,7 @@ img {
 }
 
 .about .container {
-    background-color: rgba(255, 255, 255, 0.95);
+    background-color: rgba(249, 247, 245, 0.95);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     padding: 60px;
@@ -488,7 +489,7 @@ img {
 }
 
 .services .container {
-    background-color: rgba(255, 255, 255, 0.95);
+    background-color: rgba(249, 247, 245, 0.95);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     padding: 60px;
@@ -568,7 +569,7 @@ img {
 }
 
 .testimonials .container {
-    background-color: #2C3E50;
+    background-color: #8B3A3A;
     padding: 60px;
     border-radius: 8px;
 }
@@ -639,7 +640,7 @@ img {
 }
 
 .gallery .container {
-    background-color: rgba(255, 255, 255, 0.95);
+    background-color: rgba(249, 247, 245, 0.95);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     padding: 60px;
@@ -674,7 +675,7 @@ img {
 }
 
 .contact .container {
-    background-color: rgba(255, 255, 255, 0.95);
+    background-color: rgba(249, 247, 245, 0.95);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     padding: 60px;
