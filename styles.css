@@ -285,7 +285,6 @@ img {
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
-    background-color: #8B4513;
     opacity: 0;
     transition: opacity 1s ease-in-out;
 }
