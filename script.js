@@ -65,9 +65,9 @@ document.addEventListener('DOMContentLoaded', function() {
             goToSlide(newIndex);
         }
         
-        // Auto-advance every 5 seconds
+// Auto-advance every 8 seconds
         function startCarousel() {
-            slideInterval = setInterval(nextSlide, 5000);
+            slideInterval = setInterval(nextSlide, 8000);
         }
         
         function stopCarousel() {
