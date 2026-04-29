@@ -423,7 +423,7 @@ img {
    ======================================== */
 .about {
     padding: 100px 0;
-    background-color: rgba(255, 255, 255, 0.92);
+    background-color: transparent;
 }
 
 .about-grid {
@@ -506,7 +506,7 @@ img {
    ======================================== */
 .services {
     padding: 100px 0;
-    background-color: rgba(255, 255, 255, 0.92);
+    background-color: transparent;
 }
 
 .section-header {
@@ -643,7 +643,7 @@ img {
    ======================================== */
 .gallery {
     padding: 100px 0;
-    background-color: rgba(255, 255, 255, 0.92);
+    background-color: transparent;
 }
 
 .gallery-grid {
@@ -670,7 +670,7 @@ img {
    ======================================== */
 .contact {
     padding: 100px 0;
-    background-color: rgba(255, 255, 255, 0.92);
+    background-color: transparent;
 }
 
 .contact-grid {
