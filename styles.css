@@ -273,6 +273,16 @@ img {
     min-height: 85vh;
     position: relative;
     overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+
+.hero .container {
+    height: 100%;
+    position: relative;
+    z-index: 3;
+    display: flex;
+    align-items: center;
 }
 
 .hero-carousel {
