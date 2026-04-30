@@ -163,16 +163,31 @@ document.addEventListener('DOMContentLoaded', function() {
     if (contactForm) {
         contactForm.addEventListener('submit', function(e) {
             e.preventDefault();
-            
-            // Get form data
-            const formData = new FormData(this);
-            const data = Object.fromEntries(formData.entries());
-            
-            // Show success message (in production, this would send to a server)
-            alert('Thank you for your message! We will get back to you soon.');
-            
-            // Reset form
-            this.reset();
+
+            const submitBtn = this.querySelector('button[type="submit"]');
+            const originalText = submitBtn.textContent;
+            submitBtn.textContent = 'Sending...';
+            submitBtn.disabled = true;
+
+            fetch(this.action, {
+                method: 'POST',
+                body: new FormData(this),
+                headers: { 'Accept': 'application/json' }
+            })
+            .then(function(response) {
+                if (response.ok) {
+                    contactForm.innerHTML = '<div style="text-align:center;padding:40px 0"><i class="fas fa-check-circle" style="font-size:48px;color:#8B4513;margin-bottom:16px;display:block"></i><h3>Message Sent!</h3><p>Thank you for reaching out. Caroline will be in touch with you soon.</p></div>';
+                } else {
+                    submitBtn.textContent = originalText;
+                    submitBtn.disabled = false;
+                    alert('Something went wrong. Please try again or email carolineackel@gmail.com directly.');
+                }
+            })
+            .catch(function() {
+                submitBtn.textContent = originalText;
+                submitBtn.disabled = false;
+                alert('Something went wrong. Please try again or email carolineackel@gmail.com directly.');
+            });
         });
     }
     
@@ -193,12 +208,12 @@ document.addEventListener('DOMContentLoaded', function() {
     // Scroll Animation - Fade In Elements
     // ========================================
     const animateOnScroll = function() {
-        const elements = document.querySelectorAll('.service-card, .testimonial-card, .gallery-grid img');
-        
+        const elements = document.querySelectorAll('.service-card, .testimonial-card');
+
         elements.forEach((el, index) => {
             const elementTop = el.getBoundingClientRect().top;
             const windowHeight = window.innerHeight;
-            
+
             if (elementTop < windowHeight - 100) {
                 el.style.opacity = '1';
                 el.style.transform = 'translateY(0)';
@@ -233,6 +248,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
+
     // ========================================
     // Console Welcome Message
     // ========================================

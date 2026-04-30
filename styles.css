@@ -292,10 +292,12 @@ img {
 
 .hero-carousel {
     position: absolute;
-    top: 0;
+    top: 30px;
     left: 0;
-    width: 100%;
-    height: 100%;
+    right: 30px;
+    bottom: 0;
+    border-radius: 12px;
+    overflow: hidden;
 }
 
 .carousel-slide {
@@ -395,15 +397,6 @@ img {
     flex-wrap: wrap;
 }
 
-.hero-left .btn-outline {
-    color: var(--primary);
-    border-color: var(--primary);
-}
-
-.hero-left .btn-outline:hover {
-    background-color: var(--primary);
-    color: var(--white);
-}
 
 /* ========================================
    About Section
@@ -499,6 +492,23 @@ img {
 /* ========================================
    Services Section
    ======================================== */
+.why-auctioneer {
+    padding: 100px 0;
+    background-color: transparent;
+}
+
+.why-auctioneer .container {
+    background-color: rgba(249, 247, 245, 0.5);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: 60px;
+    border-radius: 8px;
+}
+
+.why-auctioneer .lead {
+    color: var(--white);
+}
+
 .services {
     padding: 100px 0;
     background-color: transparent;
@@ -651,7 +661,7 @@ img {
    Gallery Section
    ======================================== */
 .gallery {
-    padding: 100px 0;
+    padding: 80px 60px;
     background-color: transparent;
 }
 
@@ -674,12 +684,16 @@ img {
     height: 250px;
     object-fit: cover;
     border-radius: 8px;
-    transition: var(--transition);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    position: relative;
+    z-index: 1;
 }
 
 .gallery-grid img:hover {
-    transform: scale(1.03);
-    box-shadow: var(--shadow-hover);
+    transform: scale(1.08);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+    z-index: 2;
 }
 
 /* ========================================
@@ -1008,6 +1022,10 @@ img {
         grid-template-columns: 1fr;
     }
 
+    .gallery {
+        padding: 60px 20px;
+    }
+
     .gallery-grid {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -1041,6 +1059,10 @@ img {
         text-align: center;
     }
 
+    .gallery {
+        padding: 40px 15px;
+    }
+
     .gallery-grid {
         grid-template-columns: 1fr;
     }
@@ -1049,3 +1071,5 @@ img {
         display: none;
     }
 }
+
+
