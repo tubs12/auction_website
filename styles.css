@@ -509,6 +509,21 @@ img {
     color: var(--white);
 }
 
+.why-auctioneer-grid {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 60px;
+    align-items: center;
+}
+
+.why-auctioneer-image img {
+    width: 320px;
+    height: 320px;
+    object-fit: cover;
+    border-radius: 8px;
+    display: block;
+}
+
 .services {
     padding: 100px 0;
     background-color: transparent;
