@@ -23,12 +23,16 @@ document.addEventListener('DOMContentLoaded', function() {
     // ========================================
     // Build Carousel Slides
     // ========================================
+    // Images that should anchor to the top (crop from bottom instead of center)
+    const topAlignedImages = ['image1.jpeg'];
+
     const carouselContainer = document.querySelector('.hero-carousel');
     eventImages.forEach(function(filename, index) {
         const slide = document.createElement('div');
         slide.classList.add('carousel-slide');
         if (index === 0) slide.classList.add('active');
         slide.style.backgroundImage = "url('images/carousel/" + filename + "')";
+        if (topAlignedImages.includes(filename)) slide.style.backgroundPosition = 'top';
         carouselContainer.appendChild(slide);
     });
 
@@ -40,6 +44,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const img = document.createElement('img');
         img.src = 'images/gallery/' + filename;
         img.alt = 'Auction event photo';
+        if (topAlignedImages.includes(filename)) img.style.objectPosition = 'top';
         galleryGrid.appendChild(img);
     });
     
