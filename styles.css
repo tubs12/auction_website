@@ -4,9 +4,9 @@
 
 /* CSS Variables */
 :root {
-    --primary: #8B4513; /* Saddle Brown - warm, western feel */
-    --primary-dark: #6B3410;
-    --primary-light: #A0522D;
+    --primary: #772d18; /* Slightly darker maroon tone */
+    --primary-dark: #5b2414;
+    --primary-light: #9a4524;
     --secondary: #2C3E50; /* Dark blue-gray */
     --accent: #D4AF37; /* Gold accent */
     --accent-light: #E8C547;
@@ -398,7 +398,7 @@ img {
 }
 
 .about .container {
-    background-color: rgba(249, 247, 245, 0.95);
+    background-color: rgba(249, 247, 245, .5);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     padding: 60px;
@@ -450,7 +450,7 @@ img {
 
 .about-content p {
     margin-bottom: 20px;
-    color: var(--text-light);
+    color: var(--white);
 }
 
 .about-stats {
@@ -489,7 +489,7 @@ img {
 }
 
 .services .container {
-    background-color: rgba(249, 247, 245, 0.95);
+    background-color: rgba(249, 247, 245, 0.5);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     padding: 60px;
@@ -508,7 +508,7 @@ img {
 }
 
 .section-header p {
-    color: var(--text-light);
+    color: var(--white);
     font-size: 18px;
 }
 
@@ -519,7 +519,7 @@ img {
 }
 
 .service-card {
-    background-color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.35);
     padding: 40px 30px;
     border-radius: 8px;
     text-align: center;
@@ -556,7 +556,7 @@ img {
 }
 
 .service-card p {
-    color: var(--text-light);
+    color: var(--white);
     font-size: 15px;
 }
 
@@ -569,7 +569,7 @@ img {
 }
 
 .testimonials .container {
-    background-color: #6B2B2B;
+    background-color: rgba(89, 34, 34, 0.75);
     padding: 60px;
     border-radius: 8px;
 }
@@ -590,7 +590,7 @@ img {
 }
 
 .testimonial-card {
-    background-color: rgba(255, 255, 255, 0.05);
+    background-color: rgba(255, 255, 255, 0.35);
     padding: 35px;
     border-radius: 8px;
     border: 1px solid rgba(255, 255, 255, 0.1);
@@ -640,7 +640,7 @@ img {
 }
 
 .gallery .container {
-    background-color: rgba(249, 247, 245, 0.95);
+    background-color: rgba(249, 247, 245, 0.5);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     padding: 60px;
@@ -675,7 +675,7 @@ img {
 }
 
 .contact .container {
-    background-color: rgba(249, 247, 245, 0.95);
+    background-color: rgba(249, 247, 245, 0.5);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     padding: 60px;
@@ -694,7 +694,7 @@ img {
 }
 
 .contact-info-section > p {
-    color: var(--text-light);
+    color: var(--white);
     font-size: 18px;
     margin-bottom: 35px;
 }
@@ -729,7 +729,7 @@ img {
 }
 
 .contact-item p {
-    color: var(--text-light);
+    color: var(--white);
 }
 
 .contact-socials {
@@ -763,7 +763,7 @@ img {
 }
 
 .contact-form-section {
-    background-color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.35);
     padding: 45px;
     border-radius: 8px;
     box-shadow: var(--shadow);
@@ -818,7 +818,7 @@ img {
    Footer
    ======================================== */
 .footer {
-    background-color: #6B2B2B;
+    background-color: rgba(107, 43, 43, 0.75);
     color: var(--white);
     padding: 70px 0 0;
 }
