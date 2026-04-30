@@ -10,7 +10,6 @@ const eventImages = [
     'image0.jpeg',
     'image1.jpeg',
     'image3.jpeg',
-    'image4.jpeg',
     'image6.jpeg',
     'image7.jpeg',
     'image8.jpeg',
@@ -195,6 +194,19 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
+    // ========================================
+    // Service Cards → Scroll to Contact
+    // ========================================
+    document.querySelectorAll('.service-card').forEach(function(card) {
+        card.style.cursor = 'pointer';
+        card.addEventListener('click', function() {
+            const contact = document.getElementById('contact');
+            if (contact) {
+                window.scrollTo({ top: contact.offsetTop - 80, behavior: 'smooth' });
+            }
+        });
+    });
+
     // ========================================
     // Contact Form Handling
     // ========================================
