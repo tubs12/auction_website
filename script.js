@@ -2,7 +2,47 @@
 // Caroline Ackel Auctions - JavaScript
 // ========================================
 
+// ── IMAGE LIST ───────────────────────────
+// To add a new image: drop the file into both images/carousel/ and images/gallery/
+// then add the filename to this array.
+const eventImages = [
+    'first.jpeg',
+    'image0.jpeg',
+    'image1.jpeg',
+    'image3.jpeg',
+    'image4.jpeg',
+    'image6.jpeg',
+    'image7.jpeg',
+    'image8.jpeg',
+    'IMG_1054.JPG',
+    'IMG_1094.JPG'
+];
+// ─────────────────────────────────────────
+
 document.addEventListener('DOMContentLoaded', function() {
+
+    // ========================================
+    // Build Carousel Slides
+    // ========================================
+    const carouselContainer = document.querySelector('.hero-carousel');
+    eventImages.forEach(function(filename, index) {
+        const slide = document.createElement('div');
+        slide.classList.add('carousel-slide');
+        if (index === 0) slide.classList.add('active');
+        slide.style.backgroundImage = "url('images/carousel/" + filename + "')";
+        carouselContainer.appendChild(slide);
+    });
+
+    // ========================================
+    // Build Gallery Images
+    // ========================================
+    const galleryGrid = document.querySelector('.gallery-grid');
+    eventImages.forEach(function(filename) {
+        const img = document.createElement('img');
+        img.src = 'images/gallery/' + filename;
+        img.alt = 'Auction event photo';
+        galleryGrid.appendChild(img);
+    });
     
     // ========================================
     // Mobile Navigation Toggle
