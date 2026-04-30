@@ -6,15 +6,16 @@
 // To add a new image: drop the file into both images/carousel/ and images/gallery/
 // then add the filename to this array.
 const eventImages = [
-    'first.jpeg',
-    'image0.jpeg',
-    'image1.jpeg',
-    'image3.jpeg',
-    'image6.jpeg',
-    'image7.jpeg',
-    'image8.jpeg',
-    'IMG_1054.JPG',
-    'IMG_1094.JPG'
+    'one.jpeg',
+    'two.jpeg',
+    'three.jpeg',
+    'four.jpeg',
+    'five.jpeg',
+    'six.jpeg',
+    'seven.jpeg',
+    'eight.jpeg',
+    'nine.jpeg',
+    'ten.jpeg'
 ];
 // ─────────────────────────────────────────
 
@@ -24,7 +25,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Build Carousel Slides
     // ========================================
     // Images that should anchor to the top (crop from bottom instead of center)
-    const topAlignedImages = ['image1.jpeg'];
+    const topAlignedImages = [];
 
     const carouselContainer = document.querySelector('.hero-carousel');
     eventImages.forEach(function(filename, index) {
