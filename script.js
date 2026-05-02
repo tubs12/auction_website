@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Build Carousel Slides
     // ========================================
     // Images that should anchor to the top (crop from bottom instead of center)
-    const topAlignedImages = [];
+    const topAlignedImages = ['one.jpeg'];
 
     const carouselContainer = document.querySelector('.hero-carousel');
     eventImages.forEach(function(filename, index) {

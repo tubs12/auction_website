@@ -313,6 +313,14 @@ img {
     transition: opacity 1s ease-in-out;
 }
 
+.carousel-slide:first-child {
+    background-position: top;
+}
+
+.gallery-grid img:first-child {
+    object-position: top;
+}
+
 .carousel-slide.active {
     opacity: 1;
 }
