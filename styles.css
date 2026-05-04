@@ -260,6 +260,19 @@ img {
     transition: var(--transition);
 }
 
+.hamburger span.rotate-1 {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger span.hide {
+    opacity: 0;
+    transform: scaleX(0);
+}
+
+.hamburger span.rotate-2 {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
 /* ========================================
    Hero Section with Carousel
    ======================================== */
@@ -1000,6 +1013,18 @@ img {
         text-align: center;
     }
 
+    .navbar-icons {
+        display: none;
+    }
+
+    .logo {
+        font-size: 20px;
+    }
+
+    .nav-content {
+        gap: 15px;
+    }
+
     .nav-links {
         display: none;
         position: absolute;
@@ -1008,8 +1033,21 @@ img {
         right: 0;
         background-color: var(--white);
         flex-direction: column;
-        padding: 20px;
+        gap: 4px;
+        padding: 16px 20px 20px;
         box-shadow: var(--shadow);
+    }
+
+    .nav-links a {
+        padding: 10px 0;
+        font-size: 14px;
+    }
+
+    .nav-links a[href="#contact"] {
+        display: block;
+        text-align: center;
+        margin-top: 8px;
+        padding: 10px 14px;
     }
 
     .nav-links.active {
@@ -1029,16 +1067,33 @@ img {
         width: 100%;
     }
 
+    .hero-left {
+        padding: 40px 20px;
+        background-color: rgba(249, 247, 245, 0.75);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+    }
+
     .hero-right {
-        min-height: 50vh;
+        min-height: 55vh;
+    }
+
+    .hero-carousel {
+        top: 0;
+        right: 0;
+        border-radius: 0;
     }
 
     .hero h1 {
         font-size: 36px;
+        color: var(--text-dark);
+        text-shadow: none;
     }
 
     .hero-subtitle {
         font-size: 18px;
+        color: var(--text-dark);
+        opacity: 1;
     }
 
     .about h2,
