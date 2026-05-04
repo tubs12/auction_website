@@ -44,8 +44,8 @@ body::before {
     content: '';
     position: fixed;
     inset: 0;
-    background: url('wood.png') repeat top left;
-    background-size: 60%;
+    background: url('wood.png') no-repeat center center;
+    background-size: cover;
     z-index: -1;
 }
 
@@ -1100,6 +1100,20 @@ img {
     .section-header h2,
     .contact-info-section h2 {
         font-size: 32px;
+    }
+
+    .why-auctioneer .container {
+        padding: 40px 20px;
+    }
+
+    .why-auctioneer-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .why-auctioneer-image img {
+        width: 100%;
+        height: 240px;
     }
 
     .services-grid,
